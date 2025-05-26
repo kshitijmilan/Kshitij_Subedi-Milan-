@@ -32,11 +32,17 @@
     </section>
     <section id="contact">
         <h2>Drop your querry:</h2>
-        <form action="send.php" method="POST">
-                <input type="email_address" placeholder="Your Email" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+       <form action="send.php" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" required></textarea><br><br>
+
+    <input type="submit" value="Send Message">
 </section>
     <script>src = "Script1.js"</script>
 </body>
