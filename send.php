@@ -1,9 +1,9 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Get and sanitize input
-    $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $message = htmlspecialchars($_POST["message"]);
+    $name = htmlspecialchars($_GET["name"]);
+    $email = htmlspecialchars($_GET["email"]);
+    $message = htmlspecialchars($_GET["message"]);
 
     // Prepare email
     $to = "kshitijmilan@hotmail.com"; // 🔁 Replace with YOUR email
