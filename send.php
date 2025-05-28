@@ -20,7 +20,5 @@ require 'PHPMailer/src/Exception.php';
     } else {
         echo "❌ Failed to send message.";
     }
-    echo "❌ Invalid request.";
-        break;
 }
 ?>
