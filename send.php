@@ -2,7 +2,6 @@
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
 
 if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) {
     $name = htmlspecialchars($_POST["name"]);
