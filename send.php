@@ -4,9 +4,11 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
 
-    $name = htmlspecialchars($_GET["name"]);
-    $email = htmlspecialchars($_GET["email"]);
-    $message = htmlspecialchars($_GET["message"]);
+if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) {
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $message = htmlspecialchars($_POST["message"]);
+}
 
     // Prepare email
     $to = "kshitijmilan@gmail.com"; // 🔁 Replace with YOUR email
