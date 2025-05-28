@@ -15,10 +15,10 @@ require 'PHPMailer/src/Exception.php';
     $headers = "From: $email";
 
     // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "✅ Message sent successfully!";
-    } else {
-        echo "❌ Failed to send message.";
-    }
+    if (mail($to, $subject, $body, $headers)) 
+{
+    echo "✅ Message sent successfully!";
+} else {
+    echo "❌ Failed to send message.";
 }
 ?>
