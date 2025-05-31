@@ -7,11 +7,9 @@
   <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-  <button id="dark-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
-
   <header>
     <h1>Welcome to my Website</h1>
-    <img src="https://i.postimg.cc/Y91MRLxz/Milan.jpg" alt="Milan" class="my_webpage" />
+    <img src="https://i.postimg.cc/Y91MRLxz/Milan.jpg" alt="Milan" width="200" class="my_webpage" />
     <h3>Mr. Kshitij Subedi (Milan)</h3>
     <h4>- Aspiring Software Developer</h4>
   </header>
@@ -19,17 +17,21 @@
   <section id="services">
     <h2>Reach out to me on:</h2>
     <nav>
-      <a href="https://www.linkedin.com/in/kshitij-subedi-264b5683/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.tiktok.com/@kshitijmilan?_t=ZS-8wYYCKjqzcw&_r=1" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://www.canva.com/design/DAGhhRd-dlo/b1RbQT_sstyOVSphc0o1AA/edit" target="_blank" rel="noopener noreferrer">Kids Project</a>
+      <a href="https://www.linkedin.com/in/kshitij-subedi-264b5683/" target="_blank">LinkedIn</a>
+      <a href="https://www.tiktok.com/@kshitijmilan?_t=ZS-8wYYCKjqzcw&_r=1" target="_blank">TikTok</a>
+      <a href="https://www.canva.com/design/DAGhhRd-dlo/b1RbQT_sstyOVSphc0o1AA/edit" target="_blank">Kids Project</a>
     </nav>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDMRZQKI-PDauf8rDmRR5RdqQ6jOArzSjGmX8JUVguRFWvqQ/viewform?embedded=true"></iframe>
+    <div class="form-wrapper">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeDMRZQKI-PDauf8rDmRR5RdqQ6jOArzSjGmX8JUVguRFWvqQ/viewform?embedded=true" 
+        loading="lazy" 
+        title="Contact Form"
+      ></iframe>
+    </div>
   </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
