@@ -1,11 +1,23 @@
-// JavaScript source code
-console.log("Website loaded successfully!");
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+const toggleButton = document.getElementById('dark-toggle');
+const rootElement = document.documentElement;
+
+// Force dark mode by default on load (unless user has chosen light mode)
+if (localStorage.getItem('theme') === 'light') {
+    rootElement.classList.remove('dark');
+    toggleButton.textContent = 'Dark Mode';
+} else {
+    // Default or localStorage 'dark' => activate dark mode
+    rootElement.classList.add('dark');
+    toggleButton.textContent = 'Light Mode';
+}
+
+toggleButton.addEventListener('click', () => {
+    rootElement.classList.toggle('dark');
+    if (rootElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        toggleButton.textContent = 'Light Mode';
+    } else {
+        localStorage.setItem('theme', 'light');
+        toggleButton.textContent = 'Dark Mode';
+    }
 });
