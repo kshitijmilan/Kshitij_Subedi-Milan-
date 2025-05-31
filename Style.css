@@ -1,154 +1,92 @@
-/* Base Styles */
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: slateblue;
-    color: #111;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: slateblue;
+  color: #111;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: slateblue;
-    position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    min-height: 3rem;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0.15em solid #333;
-    width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
+.my_webpage {
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  margin: 1rem 0;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
+nav a {
+  margin-right: 1rem;
+  color: #e0e0ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+nav a:hover {
+  color: #ffda79;
 }
 
-img.my_webpage {
-    width: 200px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    margin: 1rem auto;
-    display: block;
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 3rem 1rem;
+  color: white;
+  text-align: center;
 }
 
-    img.my_webpage:hover {
-        transform: scale(1.05);
-    }
-
-h3, h4 {
-    margin: 0.2rem 0;
+#contact h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-nav {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+/* Form wrapper with shadow, radius, padding */
+.form-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  animation: fadeIn 1s ease forwards;
 }
 
-    nav a {
-        text-decoration: none;
-        color: white; 
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-
-        nav a:hover,
-        nav a:focus {
-            color: gold;
-            text-decoration: underline;
-        }
-
-section {
-    padding: 2rem 1rem;
-    max-width: 900px;
-    margin: 0 auto 3rem;
+/* Iframe styles */
+.form-wrapper iframe {
+  width: 100%;
+  min-height: 650px;
+  border: none;
+  border-radius: 12px;
+  display: block;
 }
 
-#contact iframe {
-    width: 100%;
-    min-height: 600px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Dark mode */
-.dark {
-    background-color: #483d8b; /* Darker slateblue */
-    color: #eee;
-}
-
-    .dark header {
-        background: #1f2937;
-    }
-
-    .dark nav a {
-        color: #60a5fa;
-    }
-
-        .dark nav a:hover,
-        .dark nav a:focus {
-            color: #3b82f6;
-        }
-
-/* Dark mode toggle button */
-#dark-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: #2563eb;
-    border: none;
-    color: white;
-    padding: 0.5rem 0.8rem;
-    font-weight: 700;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgb(37 99 235 / 0.5);
-    transition: background-color 0.3s ease;
-    z-index: 1000;
-}
-
-    #dark-toggle:hover {
-        background-color: #1e40af;
-    }
 
 /* Responsive */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    nav {
-        gap: 1rem;
-    }
+  #contact {
+    padding: 2rem 1rem;
+  }
+  .form-wrapper {
+    padding: 0.5rem;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0 0;
+  }
 }
