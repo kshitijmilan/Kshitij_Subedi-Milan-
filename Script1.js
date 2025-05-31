@@ -1,23 +1,20 @@
-const toggleButton = document.getElementById('dark-toggle');
-const rootElement = document.documentElement;
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleDarkMode");
+    const body = document.body;
 
-// Force dark mode by default on load (unless user has chosen light mode)
-if (localStorage.getItem('theme') === 'light') {
-    rootElement.classList.remove('dark');
-    toggleButton.textContent = 'Dark Mode';
-} else {
-    // Default or localStorage 'dark' => activate dark mode
-    rootElement.classList.add('dark');
-    toggleButton.textContent = 'Light Mode';
-}
-
-toggleButton.addEventListener('click', () => {
-    rootElement.classList.toggle('dark');
-    if (rootElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-        toggleButton.textContent = 'Light Mode';
-    } else {
-        localStorage.setItem('theme', 'light');
-        toggleButton.textContent = 'Dark Mode';
+    // Check for saved preference
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
     }
+
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        // Save preference to localStorage
+        if (body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
 });
