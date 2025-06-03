@@ -1,4 +1,3 @@
-
 /* General styles */
 body {
     font-family: Arial, sans-serif;
@@ -23,12 +22,10 @@ body.dark {
     background-color: #121212;
     color: #e0e0e0;
 }
-
-    body.dark .btn-dark-toggle {
-        background-color: #333;
-        color: #e0e0e0;
-    }
-
+body.dark .btn-dark-toggle {
+    background-color: #333;
+    color: #e0e0e0;
+}
 
 header {
     text-align: center;
@@ -48,10 +45,9 @@ nav a {
     font-weight: 600;
     transition: color 0.3s;
 }
-
-    nav a:hover {
-        color: #ffda79;
-    }
+nav a:hover {
+    color: #ffda79;
+}
 
 /* Contact Section */
 #contact {
@@ -59,17 +55,23 @@ nav a {
     padding: 3rem 1rem;
     color: white;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Dark mode for contact section background */
+body.dark #contact {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-    #contact h2 {
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        font-size: 2rem;
-    }
+#contact h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
 
 /* Form wrapper with shadow, radius, padding */
 .form-wrapper {
-    background: white;
+    background: white; /* Always white, excludes Google Form from dark mode */
     border-radius: 12px;
     max-width: 500px;
     margin: 0 auto;
@@ -77,14 +79,14 @@ nav a {
     animation: fadeIn 1s ease forwards;
 }
 
-    /* Iframe styles */
-    .form-wrapper iframe {
-        width: 100%;
-        min-height: 650px;
-        border: none;
-        border-radius: 12px;
-        display: block;
-    }
+/* Iframe styles */
+.form-wrapper iframe {
+    width: 100%;
+    min-height: 650px;
+    border: none;
+    border-radius: 12px;
+    display: block;
+}
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -92,7 +94,6 @@ nav a {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -104,11 +105,9 @@ nav a {
     #contact {
         padding: 2rem 1rem;
     }
-
     .form-wrapper {
         padding: 0.5rem;
     }
-
     nav a {
         display: inline-block;
         margin: 0.5rem 0.5rem 0 0;
